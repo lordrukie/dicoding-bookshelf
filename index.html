@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/style/style.css">
+    <link rel="stylesheet" href="./src/style/responsive.css">
+</head>
+<body>
+    <head>
+        <nav>
+            <h1>BookShelf Apps</h1>
+        </nav>
+    </head>
+    <main>
+        <div class="container">
+            <div class="addBook">
+                <h2 class="container-header text-center">Add New Book</h2>
+                <form class="form" action="#" id="inputBook">
+                    <div>
+                        <label for="title">Book Name</label> <br>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+                    <div>
+                        <label for="author">Author</label> <br>
+                        <input type="text" id="author" name="author" required>
+                    </div>
+                    <div>
+                        <label for="year">Year of create</label> <br>
+                        <input type="number" id="year" name="year" required>
+                    </div>
+                    <label for="isCompleted">Completed Read</label> 
+                    <input type="checkbox" name="isCompleted" id="isCompleted"> <br>
+                    <input type="submit" value="Add Book" name="Submit" class="btn-submit">
+                </form>
+            </div>
+            <div class="content">
+                <h2>Book List</h2>
+                <div id="searchContainer">
+                    <form action="#">
+                        <input type="text" id="search" onkeyup="searching()" placeholder="Search...">
+                    </form>
+                </div>
+                <div class="container">
+                    <h3 class="container-header">Unreaded Book</h3>
+                    <div class="list-item" id="unCompleted">
+                        <!-- <div class="bookContainer">
+                            <ul>
+                                <li class="title">Harry</li>
+                                <li class="author"><i>saya - 2009</i></li>
+                            </ul>
+                            <div class="button">
+                                <button class="delete-button"></button>
+                                <button class="completed-button"></button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+        
+                <div class="container">
+                    <h3 class="container-header">Readed Book</h3>
+                    <div class="list-item" id="completed">
+                        <!-- <div class="bookContainer">
+                            <ul>
+                                <li class="title">Harry II</li>
+                                <li class="author"><i>kamu - 2009</i></li>
+                            </ul>
+                            <div class="button">
+                                <button class="delete-button"></button>
+                                <button class="unCompleted-button"></button>
+                            </div>
+                        </div>
+                        <div class="bookContainer">
+                            <ul>
+                                <li class="title">Harry II yang didirikan sendiri tapi kenapa gak pulang pulang</li>
+                                <li class="author"><i>kamu - 2009</i></li>
+                            </ul>
+                            <div class="button">
+                                <button class="delete-button"></button>
+                                <button class="unCompleted-button"></button>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <p>Crafted with <span>&hearts;</span> by <a href="https://github.com/lordrukie">Lordrukie</a></p>
+    </footer>
+    <script src="./src/script/storage.js"></script>
+    <script src="./src/script/dom.js"></script>
+    <script src="./src/script/search.js"></script>
+    <script src="./src/script/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+* {
+    margin: unset;
+    padding: unset;
+}
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+nav {
+    background-color: rgb(10, 163, 130);
+    padding: 10px;
+    display: flex;
+    color: white;
+}
+nav h1 {
+    margin: 0 auto;
+}
+main {
+    padding: 20px;
+    font-weight: bold;
+}
+
+input {
+    margin: 5px 0;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 0.5px solid rgb(13, 51, 43);
+}
+
+.content {
+    margin-top: 20px;
+}
+ul li {
+    display: block;
+}
+.title {
+    font-weight: bold;
+}
+.author {
+    font-style: italic;
+    margin-top: 3px;
+    font-size: 12px;
+}
+.list-item ul {
+    align-self: center;
+}
+.list-item div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: unset;
+    justify-content: space-around;
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+.list-item button {
+    padding: 10px;
+    margin: 5px;
+    border-style: none;
+    background-repeat: no-repeat;
+    height: 35px;
+    width: 35px;
+    background-position: center;
+    background-size: 35px;
+    background-color: unset;
+}
+.btn-submit {
+    padding: 10px;
+    border-style: unset;
+    border-radius: 3px;
+    background-color: rgb(10, 163, 130);
+    color: white;
+}
+.bookContainer {
+    -webkit-box-shadow: 0px 2px 13px -7px rgba(0,0,0,0.38);
+    -moz-box-shadow: 0px 2px 13px -7px rgba(0,0,0,0.38);
+    box-shadow: 0px 2px 13px -7px rgba(0,0,0,0.38);
+}
+
+.bookContainer ul {
+    padding: 5px 20px;
+    box-sizing: border-box;
+}
+input {
+    width: 100%;
+}
+#isCompleted {
+    width: auto;
+    margin-left: 10px;
+}
+
+#search {
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: rgb(10, 163, 130);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    color: white;
+    font-size: 13px;
+}
+
+footer span {
+    font-size: 17px;
+    color: rgb(248, 59, 106);
+}
+
+footer a {
+    text-decoration: unset;
+    color: rgb(252, 244, 172);
+    font-weight: bold;
+}
+
+.delete-button {
+    background-image: url('../../assets/trash-outline.svg');
+}
+
+.delete-button:hover {
+    background-image: url('../../assets/trash-fill.svg');
+}
+
+.completed-button {
+    background-image: url('../../assets/completed-book-outline.svg');
+}
+.completed-button:hover {
+    background-image: url('../../assets/completed-book-fill.svg');
+}
+.unCompleted-button {
+    background-image: url('../../assets/opened-book-outline.svg');
+}
+.unCompleted-button:hover {
+    background-image: url('../../assets/opened-book-fill.svg');
+}
+.list-item div .button {
+    border-radius: 0;
+    background-color: unset;
+}
+.container {
+    padding-bottom: 50px;
+}

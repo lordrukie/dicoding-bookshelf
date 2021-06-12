@@ -1,0 +1,9 @@
+@media screen and (min-width: 600px) {
+    .list-item div {
+        justify-content: space-between;
+    }
+    main {
+        max-width: 678px;
+        margin: 0 auto;
+    }
+}
