@@ -1,7 +1,7 @@
 let books = []
 const localStorageKey = 'books'
 
-function isStorageExist() /* boolean */ {
+function isStorageExist() {
     if(typeof(Storage) === undefined){
         alert("Browser kamu tidak mendukung local storage");
         return false
@@ -14,7 +14,7 @@ function composeObject(id, title, author, year, isComplete) {
         id,
         title,
         author,
-        year,
+        year: Number(year),
         isComplete
     };
 }
@@ -32,12 +32,12 @@ function saveToStorage() {
 }
 
 function saveData() {
-    const parsedData /* string */ = JSON.stringify(books);
+    const parsedData = JSON.stringify(books);
     localStorage.setItem(localStorageKey, parsedData);
 }
 
 function loadData() {
-    const serializedData /* string */ = localStorage.getItem(localStorageKey);
+    const serializedData = localStorage.getItem(localStorageKey);
     let data = JSON.parse(serializedData);
 
     if(data !== null)

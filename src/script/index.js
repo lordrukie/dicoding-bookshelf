@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
         addBooks()
         e.preventDefault()
     })
-
     if(isStorageExist()){
         loadData()
     }

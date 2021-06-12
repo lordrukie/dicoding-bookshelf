@@ -13,12 +13,10 @@ function searching() {
 function showSearch(container, filter) {
     for (i = 0; i < container.length; i++) {
         const txtValue = container[i].textContent || container[i].innerText;
-
           if (txtValue.indexOf(filter) > -1) {
               container[i].style.display = "";
             } else {
               container[i].style.display = "none";
             }
-
       }
 }

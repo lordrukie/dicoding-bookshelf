@@ -65,6 +65,7 @@ ul li {
     background-position: center;
     background-size: 35px;
     background-color: unset;
+    transition: background-image 0.3s;
 }
 .btn-submit {
     padding: 10px;

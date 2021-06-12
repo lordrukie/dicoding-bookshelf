@@ -13,8 +13,9 @@ function addBooks() {
 
 function showBooks(book) {
     let container = document.getElementById('unCompleted')
-    const test  = document.createElement('div')
-    test.classList.add('bookContainer')
+    const containerButton = document.createElement('div')
+    const parentDiv  = document.createElement('div')
+    parentDiv.classList.add('bookContainer')
 
     const ul = document.createElement('ul')
     const titleContainer = document.createElement('li')
@@ -26,11 +27,11 @@ function showBooks(book) {
     authorContainer.innerText = `${book.author} - ${book.year}`
     ul.append(titleContainer, authorContainer)
 
-    const containerButton = document.createElement('div')
     const formId = document.createElement('input')
     formId.setAttribute('type', 'hidden')
     formId.setAttribute('value', book.id)
-    test.append(ul/** make something here */, containerButton, formId)
+
+    parentDiv.append(ul, containerButton, formId)
 
         if(book.isComplete) {
             container = document.getElementById('completed')
@@ -39,7 +40,7 @@ function showBooks(book) {
             containerButton.append(deleteButton(), completedButton())
         }
         
-    container.append(test)
+    container.append(parentDiv)
     saveToStorage()
 }
 
@@ -74,8 +75,8 @@ function unCompletedButton(elem) {
 }
 
 function addToCompletedBook(taskElement) {
+    // Get id from hidden input form
     const bookId = taskElement.querySelector('input').value
-
     const book = findBookIdFromData(bookId);
     book.isComplete = true
 
@@ -86,7 +87,6 @@ function addToCompletedBook(taskElement) {
 function addToUncompletedBook(taskElement) {
     // Get id from hidden input form
     const bookId = taskElement.querySelector('input').value
-
     const book = findBookIdFromData(bookId);
     book.isComplete = false
 
@@ -98,7 +98,6 @@ function removeBook(taskElement) {
     const warning = confirm('Are you sure to delete this book? this action would be undone')
     if(warning) {
         const bookId = taskElement.querySelector('input').value
-
         for(let i = 0; i < books.length; i++) {
             if(books[i].id == bookId) {
                 books.splice(i, 1);
